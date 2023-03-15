@@ -113,3 +113,183 @@ when?
 
  - when you dont know how many times the loop should run, use while loop
  - when you know how many times - use for
+
+
+
+
+
+
+### string- this is pretty weird compared to other languages.
+
+
+a="koushith"
+b="koushith"
+
+a==b // true --- it is pointing to same object
+
+
+### Functions
+
+- functions in java- we call it as methods
+
+return type-> the value of the returned variable.
+if you dont want to return anything- write void. 
+
+```java 
+   static int sum2(){
+        return  xxx;
+    }
+```
+
+passing params- pass in the order of decelaration.
+
+``` java 
+sum(int a, int b){   ----params
+
+}
+
+
+sum(20,30) --- args
+
+```
+
+
+in Java there is no pass by reference. 
+
+```java 
+
+
+psvm(s a){
+    name ="koushith";
+    greet(name);
+   s.o.pln(name) 
+
+    greet(naam){
+       naam="amin"
+        xxxxxxxxxx 
+    }
+}
+
+koushith
+amin
+
+```
+
+
+here name is a reference variable and value is stored somewhere in the heap
+
+- here the value is passed inside fn call. not the reference.
+
+name and naam is same. and naam is the copy of reference variable.
+
+### Scoping
+
+
+- values that are initilized inside the block will remain inside the block.
+
+```
+{
+some code declared here- it is not accessable outside
+}
+
+```
+
+but if you try to access something which is already initilized in the same methods will be accessable
+
+goes well for the for loops aswell.
+
+in js that is not the case.
+
+```java
+ public static void main(String[] args) {
+        int a=20;
+        String name ="koushith";
+        greet(name);
+        System.out.println(name);
+        System.out.println(a);
+        for (int i=0; i<20; i++){
+        System.out.println(a);
+        }
+    }
+```
+### Loop scope
+it will print 20- but if you try to initilize inside for loop. it wont allow. in js we can- 
+
+### Shadowing
+
+
+when we use a same variable name in differnt scopes, and try to log it it shadows the high level scope var value.
+
+```javas 
+package koushith;
+
+import java.util.Scanner;
+
+public class sum {
+
+    static int a=30;
+    public static void main(String[] args) {
+        System.out.println(a);
+        int a=20;
+        String name ="koushith";
+        greet(name);
+        System.out.println(name);
+        System.out.println(a);
+        for (int i=0; i<20; i++){
+
+        System.out.println(a);
+        }
+    }
+
+}
+```
+
+- value of a will be shaodwed to 20 inside main function.
+- it all depends n scope, where you have defined the cariable.
+
+class variable should be in static.
+scope will begin when the value is initilized.
+
+
+### Variable args
+
+- when you dont know the length of the params use this. 
+```
+static void leng(string ...v){
+code goes here.
+}
+```
+
+
+### Function overloading
+
+- when you have a function of same name, but different parameters, it is known as overloading.
+- it checks at compile time. based on the arguements passed to it.
+
+there is no concept of overloading in js.
+
+```java 
+package koushith;
+
+public class OverLoading {
+    public static void main(String[] args) {
+
+
+        func("hello");
+        func(20);
+    }
+
+    static void func(int a){
+System.out.println(a);
+    }
+
+    static void func(String a){
+        System.out.println(a);
+    }
+
+
+}
+```
+
+Note - parametser should be different. or else it will throw an error
+

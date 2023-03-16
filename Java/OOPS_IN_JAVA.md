@@ -136,15 +136,78 @@ constructor basically defines what happens when the object is created. aka used 
 
 constructor is a special funcytion that runs when it is instanciated.
 
+```java 
+package koushith;
 
 
+public class Main {
+    public static void main(String[] args) {
+
+        Student koushith = new Student(15, "Koushith", 85.4f);
+        Student rahul = new Student(18, "Rahul Rana", 90.3f);
+        System.out.println(koushith.name);
+        
+    }
+}
+
+class Student {
+    int rno;
+    String name;
+    float marks = 90;
+    
+    //constructor name should be same sa class name
+    Student (int rno, String name, float marks) {
+        this.rno = rno;
+        this.name = name;
+        this.marks = marks;
+    }
+}
+
+// internally this will be replaced with reference variable
+
+```
+
+- constructor name should be same as class name.
+- in js - if you rey to log the ref variable - it will print all properties with default value or with ```undefined``` . that's not the case in java
+
+you can add the methods inside class
 
 
+```java 
+
+class Student {
+    int rno;
+    String name;
+    float marks = 90;
+    
+    //constructor name should be same sa class name
+    Student (int rno, String name, float marks) {
+        this.rno = rno;
+        this.name = name;
+        this.marks = marks;
+    }
+    
+    void greeting(){
+        System.out.println("Hello" + this.name);
+
+    }
+}
+
+// you can access it by
+
+ Student rahul = new Student(18, "Rahul Rana", 90.3f);
+
+rahul.greeting()
+
+```
+
+### You can also overload the constructor similar to functions. based on params passed it will determine.
 
 
+### Why we dont need new keyword for primitives?
 
+- primitives are not implimented as objects.
 
-
-
+check passing referene vs value
 
 

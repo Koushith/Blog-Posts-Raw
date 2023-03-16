@@ -1,4 +1,3 @@
-
 # OOPS in Java
 
 Quick analogy to understand OOPS.
@@ -96,11 +95,7 @@ when something is not initilized - by default it is ```null``` in java. ```undef
 | -------- |          | ---------------  |
 | Student  |          |     -------        |
                       |  | name :"jaja" ||
-                      |  | roll :225    ||
-
-
-
-
+                      |  | roll :225    |
 
 
 This is how it is stored in java. hence all class objects in java are allocated memory dynamically- i.e during runtime.
@@ -108,11 +103,38 @@ This is how it is stored in java. hence all class objects in java are allocated 
 all the variable are allocated during compile time and
 objects---> during run time. i.e while the program is running.
 
+- new keyword does the dynamic memory allocation.
 
 
+### Check for default values later. 
 
 
+```java 
 
+//pseudo code
+
+class Student{
+    name:"xxx",
+    roll
+    cgpa:2.5
+}
+
+Student student = new Student()
+
+student.name = "koushith"
+
+student.name // xxx --> koushith
+student.roll // returns the defaukt value if no value present.in this case its null
+
+```
+
+#### Constructor
+
+- assing a values like above example becomes repetative. 
+
+constructor basically defines what happens when the object is created. aka used to initilize the value of objects.
+
+constructor is a special funcytion that runs when it is instanciated.
 
 
 

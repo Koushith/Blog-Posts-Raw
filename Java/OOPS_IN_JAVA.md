@@ -211,3 +211,20 @@ rahul.greeting()
 check passing referene vs value
 
 
+### Final Keyword
+
+- this makes sure that the content is not modifed. const
+- const ---> final
+
+```java 
+
+final int a = 5 //you cant modify this. just like other languages you have to initilize this.
+```
+
+it works only for primitives. for reference type- naaah
+
+### Garbage collection
+
+- when obj is no longer referenced, or var is ideal, java does this to free up memory,
+
+there is a method ```finalized``` this will run when the object is destroyed. read more.

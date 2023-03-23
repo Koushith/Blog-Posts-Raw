@@ -82,5 +82,82 @@ public class Message {
 }
 ```
 
+- you can also instanciate the class within same class
 
-- you cant call ```this``` inside static methiods
+```java 
+
+
+public class StaticBlock {
+
+    int a=5;
+    int b=20;
+    
+    
+    public static void main(String[] args) {
+
+        StaticBlock st = new StaticBlock(); // this is valid
+        System.out.println(st.a);
+    }
+}
+
+```
+
+
+### Inner Classes
+
+- you can have a class inside a class. but outside class cannot be static.
+
+```java 
+
+//this cant be static coz it is not depended on anything
+public class NestedClasses {
+    // this is depended on outer class
+    static class InnerClass{
+        //code
+    }
+}
+
+
+```
+
+- constructor name should be same as class name- if you are using that to initilize.
+
+```java 
+
+package com.koushith.packages;
+
+public class NestedClasses {
+
+
+    static class Test {
+        String name;
+
+        public Test(String name) {
+            this.name = name;
+        }
+
+        
+        public static void main(String[] args) {
+            Test a = new Test("Koushith");
+            System.out.println(a);
+        }
+    }
+}
+
+```
+
+just remeber static methods are called using classname since it is not dependent on object.
+
+. binds the instance variable and reference variable.
+
+
+### Singleton 
+
+Sometines there might be a chance that only one instace of a class has to be created. 
+
+how?
+
+dont allow to call the constructor, make it private.
+
+
+--- Read more.

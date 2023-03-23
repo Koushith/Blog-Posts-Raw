@@ -81,3 +81,6 @@ public class Message {
     }
 }
 ```
+
+
+- you cant call ```this``` inside static methiods
